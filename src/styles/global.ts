@@ -1,0 +1,71 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --background: rgba(255,255,255,1);
+    --backgroundGreen: rgba(31, 103, 56, 1);
+    --backgroundSideBar: rgba(217, 217, 217, 1);
+
+    --primaryColor: #1F6738;
+    --secondaryColor: #FFFFFF;
+    --textColor500: #000000;
+    --textColor300: #000000;
+    --textColor200: #1E1E1E;
+    --textColor100: #6C757D;
+
+    --primaryButtonColor: #1F6738;
+    --secondaryButtonColor: #EEEEEE;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    @media (max-width: 1080px) {
+      font-size: 92.75%;
+    }
+    @media (max-width: 720px) {
+      font-size: 87.5%;
+    }
+  }
+
+  body {
+    height: 100vh;
+    background-color: var(--background);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, text-area, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 600;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  [disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }`;
+
+  export default GlobalStyle;
